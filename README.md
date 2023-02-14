@@ -2,7 +2,8 @@
 ## Usage example
 ```shell
 $ git clone "https://github.com/giuseppe998e/nginx_php81.git"
-$ docker image build -t nginx_php81 ./nginx_php81
+$ cd ./nginx_php81
+$ docker image build -t nginx_php81 .
 $ docker run -p 80:80 -p 443:443 -v ./www:/www nginx_php81:latest
 ```
 
