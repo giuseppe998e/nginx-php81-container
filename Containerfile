@@ -1,8 +1,8 @@
 FROM alpine:latest
 
-# Add user(& group) "nginx"
+# Add "nginx" user(& group)
 RUN addgroup -g 101 -S nginx \
-    && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx
+    && adduser -S -D -H -u 101 -s /sbin/nologin -G nginx -g nginx nginx
 
 # Update image & Add components
 RUN apk update \
