@@ -5,8 +5,7 @@ RUN addgroup -g 101 -S nginx \
     && adduser -S -D -H -u 101 -s /sbin/nologin -G nginx -g nginx nginx
 
 # Update image & Add components
-RUN apk update \
-    && apk --no-cache upgrade \
+RUN apk --no-cache upgrade \
     && apk --no-cache add supervisor inotify-tools nginx nginx-mod-http-brotli php81-fpm php81-curl php81-fileinfo php81-gd php81-gettext \
                             php81-mbstring php81-mysqli php81-opcache php81-openssl php81-pdo php81-pdo_mysql php81-pdo_pgsql php81-pdo_sqlite \
                             php81-phar php81-session php81-sockets
